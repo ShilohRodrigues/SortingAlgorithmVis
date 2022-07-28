@@ -1,0 +1,161 @@
+/*Default values */
+:root {
+  --bg: #efefef;
+  --primary-blue: #00173D;
+  --secondary-blue: #030A8C;
+  --primary-green: #05A65B;
+}
+
+html, body{
+  height: 100%;
+  font-family: "Bahnschrift light";
+  color: var(--primary-blue);
+  background-color: var(--bg);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  user-select: none; 
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  display: block;
+  border: none;
+}
+
+/* General Styles */
+header {
+  text-align: center;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  max-width: fit-content;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: default !important;
+  opacity: 0.6;
+}
+
+/* Styles for the main navigation */
+
+#algo-select .selected {
+  color: var(--primary-blue);
+  background-color: var(--bg);
+}
+
+#algo-select {
+  color: #fff;
+  background-color: var(--primary-blue);
+}
+
+.header-btn:hover {
+  color: var(--primary-blue);
+  background-color: var(--bg);
+}
+
+/* Styles for main controls */
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 2rem 0;
+}
+
+/* Slider Styles */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 0.3rem; 
+  border-radius: 0.3rem;
+  background: var(--primary-blue); 
+  outline: none; 
+  transition: 0.3s;
+  cursor: pointer;
+}
+.slider:hover {
+  opacity: 0.6;
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 1rem; 
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--primary-green);
+}
+.slider::-moz-range-thumb {
+  width: 1rem; 
+  height: 1rem; 
+  border-radius: 50%;
+  background: var(--primary-green); 
+}
+
+.slider-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "left main right";
+}
+
+.slider-title {
+  grid-area: header;
+  margin: 0.5rem 0;
+}
+
+.slider-label {
+  margin: 0.2rem 1rem 0 1rem;
+}
+
+.primary-btn {
+  min-width: 10rem;
+  font-size: 1.55rem;
+  margin: auto;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  background-color: var(--primary-green);
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.secondary-btn {
+  font-size: 1.15rem;
+  margin: auto;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  background-color: var(--primary-blue);
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.primary-btn:hover,  .secondary-btn:hover{
+  opacity: 0.6;
+}
+
+.data {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 850px;
+}

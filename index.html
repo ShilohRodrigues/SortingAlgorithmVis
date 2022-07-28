@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Sorting Visualizer</title>
+</head>
+<body> 
+  <header>
+    <h1>Sorting Algorithm Visualizer</h1>
+    <nav id="algo-select">
+      <div id="bubble" class="btn header-btn selected">Bubble Sort</div>
+      <div id="insertion" class="btn header-btn">Insertion Sort</div>
+      <div id="selection" class="btn header-btn">Selection Sort</div>
+      <div id="bozo" class="btn header-btn">Bozo Sort</div>
+      <div id="quick" class="btn header-btn">Quick Sort</div>
+      <div id="merge" class="btn header-btn">Merge Sort</div>
+    </nav>
+  </header>
+  <main>
+    <header>
+      <div class="options">     
+        <div class="slider-container">
+          <div class="slider-title">Input Size</div>
+          <div class="slider-label">5</div>
+          <div><input type="range" min="5" max="100" value="50" class="slider" id="sliderSize"></div>
+          <div class="slider-label">100</div>
+        </div>
+        <div class="slider-container">
+          <div class="slider-title">Sorting Delay (ms)</div>
+          <div class="slider-label">10</div>
+          <div><input type="range" min="10" max="1000" value="50" class="slider" id="sliderSpeed"></div>
+          <div class="slider-label">1000</div>
+        </div> 
+      </div>
+      <button id="btnNewData" class="btn secondary-btn">Generate New Dataset</button>    
+    </header>
+    <div class="data">
+      <canvas id="chart"></canvas>
+    </div>
+    <button id="btnSort" class="btn primary-btn">Sort!</button>
+  </main>
+</body>
+</html>
